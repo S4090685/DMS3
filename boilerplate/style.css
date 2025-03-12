@@ -12,3 +12,7 @@
   --col-04: rgb(223, 101, 215);
   --border: single 1rem var(var(--col-01));
 }
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
