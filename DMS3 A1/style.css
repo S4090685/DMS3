@@ -6,7 +6,7 @@
 }
 
 :root {
-  --col-01: black;
+  --col-01: rgb(193, 31, 31);
   --col-02: white;
   --col-03: pink;
   --col-04: rgb(223, 101, 215);
@@ -15,4 +15,19 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
+  background-color: white;
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--col-03);
+}
+
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--col-01);
 }
