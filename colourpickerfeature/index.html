@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Picker</title>
+
+    <link rel="Stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+
+    <style>
+      .gap-example {
+        margin-bottom: 50px; /* Adds gap below the element */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Colour Square</h1>
+
+    <div id="colour-square"></div>
+
+    <div>
+      <input
+        type="color"
+        id="colour-picker"
+        name="colour-picker"
+        value="#ff0495"
+      />
+      <label for="colour-picker">Choose a colour</label>
+    </div>
+
+    <div class="gap-example"></div>
+    <p>Choose your monster's colors:</p>
+
+    <div>
+      <input type="color" id="head" name="head" value="#e66465" />
+      <label for="head">Head</label>
+    </div>
+
+    <div>
+      <input type="color" id="body" name="body" value="#f6b73c" />
+      <label for="body">Body</label>
+      <style></style>
+    </div>
+
+    <div class="gap-example"></div>
+
+    <fieldset>
+      <legend>Choose your favrouite colour</legend>
+      <div>
+        <input type="checkbox" id="red" name="interest" value="red" />
+        <label for="red">red</label>
+      </div>
+      <div>
+        <input type="checkbox" id="yellow" name="interest" value="yellow" />
+        <label for="yellow">yellow</label>
+      </div>
+    </fieldset>
+    <form>
+      <div>
+        <input
+          type="checkbox"
+          id="subscribeNews"
+          name="subscribe"
+          value="newsletter"
+        />
+        <label for="subscribeNews">checked</label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
