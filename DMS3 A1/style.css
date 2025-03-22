@@ -13,16 +13,28 @@
   --col-05: #07517e;
   --col-06: #6997c4;
   --border: single 1rem var(var(--col-01));
+  background-color: #dee9f0;
 }
 
-body {
-  background-color: rgb(230, 242, 239);
+
+.title {
+  animation:
+  6s linear 0s infinite alternate bounce;
+}
+
+@keyframes bounce
+{
+  from {
+    transform: translateX(-50vw);
+  }to {
+    transform: translateX(50vw);
+  }
 }
 
 h1 {
   font-family: "Barriecito", system-ui;
-  font-weight:500;
-  font-size: xx-large;
+  font-weight: bold;
+  font-size: 45px;
   font-style:normal;
   color: var(--col-05);
   text-align: center;
@@ -32,7 +44,7 @@ h2 {
   font-family: "Kanit", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size:medium;
+  font-size: 17px;
   color: var(--col-01);
   text-align: center;
 }
@@ -50,22 +62,25 @@ section{
 }
 h4 {
   font-family: "Kanit", sans-serif;
-  font-weight: 500;
+  font-weight: 460;
   font-style: normal;
+  font-size: 20px;
   color: var(--col-01);
 }
 
 h5 {
   font-family: "Kanit", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
+  font-size: 15px;
   color: var(--col-06);
  
 }
 li {
   font-family: "Kanit", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
+  font-size: 15px;
   color: var(--col-06);
  
 }
