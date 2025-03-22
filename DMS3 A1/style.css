@@ -6,40 +6,66 @@
 }
 
 :root {
-  --col-01: rgb(85, 157, 97);
-  --col-02: white;
-  --col-03: rgb(105, 151, 212);
-  --col-04: rgb(223, 101, 215);
+  --col-01: #0465a2;
+  --col-02: #374955;
+  --col-03: #1F5E3F;
+  --col-04: #785a3a;
+  --col-05: #07517e;
+  --col-06: #6997c4;
   --border: single 1rem var(var(--col-01));
 }
 
 body {
-  background-color: white;
+  background-color: rgb(230, 242, 239);
 }
 
 h1 {
   font-family: "Barriecito", system-ui;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--col-03);
+  font-weight:500;
+  font-size: xx-large;
+  font-style:normal;
+  color: var(--col-05);
   text-align: center;
 }
 
-h4 {
-  font-family: "Kanit", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--col-01);
-}
 h2 {
   font-family: "Kanit", sans-serif;
   font-weight: 500;
   font-style: normal;
+  font-size:medium;
   color: var(--col-01);
+  text-align: center;
 }
 h3 {
   font-family: "Kanit", sans-serif;
   font-weight: 500;
   font-style: normal;
   color: var(--col-01);
+  text-align: center;
+}
+section{
+  text-align: center;
+  border: 2px solid #5c6c78;
+  font-weight: bold;
+}
+h4 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--col-01);
+}
+
+h5 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--col-06);
+ 
+}
+li {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--col-06);
+ 
 }
