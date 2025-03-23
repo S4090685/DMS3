@@ -17,24 +17,30 @@
     />
     <style>
       .gap1 {
-        margin-bottom: 50px; /* Adds gap below the element */
+        margin-bottom: 50px; 
       }
       .gap2 {
-        margin-bottom: 10px; /* Adds gap below the element */
+        margin-bottom: 10px; 
       }
     
       .gap3 {
-          margin-left: 40px; /* Adjust the gap as needed */
+          margin-left: 40px; 
       }
       .gap4 {
-        margin-bottom: 30px; /* Adds gap below the element */
+        margin-bottom: 30px; 
       }
       .gap5 {
-        margin-bottom: 500px; /* Adds gap below the element */
+        margin-bottom: 500px;
       }
       .gap6 {
-        margin-right: 70px; /* Adds gap below the element */
+        margin-right: 50px; 
       }
+        .box {
+            border: 2px solid #1F5E3F; 
+  
+            text-align: center;       
+        }
+    </style>
   </style>
 
   </head>
@@ -132,8 +138,21 @@
       </h5>
       <div class="gap4"></div>
     </div>
-    <div class="gap5"></div>
+   
+ <h2 class="box" class="gap2">Demonstration exploration of Orb.Farm </h2>
  
+<video id="myVideo" width="700" height="500" controls style="display: block; margin: 0 auto;" controls>
+  <source src="screen record.mp4" type="video/mp4">
+</video>
+<script>
+  const video = document.getElementById("myVideo");
+  video.addEventListener("loadedmetadata", function() {
+      video.currentTime = 2; 
+      /* the start of the video is neccessary, so I have added a code to star from 0:02 */
+  });
+</script>
+
+<div class="gap5"></div>
 
   </body>
 </html>

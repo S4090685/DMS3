@@ -25,9 +25,9 @@
 @keyframes bounce
 {
   from {
-    transform: translateX(-50vw);
+    transform: translateX(-10vw);
   }to {
-    transform: translateX(50vw);
+    transform: translateX(10vw);
   }
 }
 
@@ -84,3 +84,4 @@ li {
   color: var(--col-06);
  
 }
+
