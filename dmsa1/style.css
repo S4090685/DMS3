@@ -6,13 +6,13 @@
 }
 
 :root {
-  --col-01: #0465a2;
+  --col-01: #146ba1;
   --col-02: #374955;
   --col-03: #1F5E3F;
   --col-04: #785a3a;
   --col-05: #07517e;
   --col-06: #6997c4;
-  --col-06:#94bca8;
+  --col-06:#3f6c56;
   --border: single 1rem var(var(--col-01));
   background-color: #dee9f0;
 }
@@ -107,5 +107,5 @@ a {
   color: var(--col-04);
 }
 body {
-  background: linear-gradient(to bottom, #eafcf1, #5b836d );
+  background: linear-gradient(to bottom, #eafcf1, #67b68a );
 }
