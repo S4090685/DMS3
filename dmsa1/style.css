@@ -106,3 +106,6 @@ a {
   font-size: 18px;
   color: var(--col-04);
 }
+body {
+  background: linear-gradient(to bottom, #eafcf1, #5b836d );
+}
