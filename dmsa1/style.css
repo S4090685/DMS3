@@ -12,7 +12,7 @@
   --col-04: #785a3a;
   --col-05: #07517e;
   --col-06: #6997c4;
-  --col-06:#DBB590;
+  --col-06:#94bca8;
   --border: single 1rem var(var(--col-01));
   background-color: #dee9f0;
 }
@@ -86,3 +86,23 @@ li {
  
 }
 
+p {
+  font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  color: var(--col-03);
+}
+a {
+  font-family: Georgia, 'Times New Roman', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: var(--col-06);
+}
+.re{
+  font-family: Georgia, 'Times New Roman', sans-serif;
+  font-weight: bold;
+  font-style:normal;
+  font-size: 18px;
+  color: var(--col-04);
+}
