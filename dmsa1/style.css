@@ -12,6 +12,7 @@
   --col-04: #785a3a;
   --col-05: #07517e;
   --col-06: #6997c4;
+  --col-06:#DBB590;
   --border: single 1rem var(var(--col-01));
   background-color: #dee9f0;
 }
@@ -73,7 +74,7 @@ h5 {
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
-  color: var(--col-06);
+  color: var(--col-04);
  
 }
 li {
@@ -81,7 +82,7 @@ li {
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
-  color: var(--col-06);
+  color: var(--col-04);
  
 }
 
