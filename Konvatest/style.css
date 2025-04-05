@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   color: aqua;
+}
+h1{
+    text-align: center;
+}
+
+#konvaStage{
+    background-color: rgb(35, 129, 211);
+}
