@@ -8,3 +8,7 @@
       dropdown.classList.toggle('show');
     });
   });
+  const btn = document.getElementById("muteBtn");
+btn.addEventListener("click", () => {
+  audio.muted = !audio.muted;
+});
