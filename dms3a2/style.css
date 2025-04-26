@@ -1,3 +1,27 @@
+:root {
+  --bg-color: #fbeaff;
+  --asset-color:#dfc3eb;
+  /* --main-text-color: #362a3a;
+  --text-color: #305365; */
+}
+
+*{
+  background-color: #fbeaff;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: var(--asset-color);
+  font-family: "Winky Rough", sans-serif;
+  color: var(--text-color);
+    font-weight: 00;
+  line-height: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
 nav {
     margin: 5cap;
     display: flex;
@@ -18,7 +42,7 @@ nav {
   .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #b085f1;
+    background-color: #362A3A;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -40,7 +64,7 @@ nav {
 .dropdown {
   display: none;
   flex-direction: column;
-  background-color: #f5f5f5;
+  background-color: var(--asset-color);
   border: 1px;
   padding: 10px;
   width:60px;
@@ -48,16 +72,32 @@ nav {
 
 .dropdown a {
     padding:8px;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     display: block;
 }
-.dropdown a:hover {
-    background-color: #ddd;
-}
+
 .menu {
     position: relative;
 }
 .show {display:block;}
-
-
+.custom-controls button {
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+}
+#switchBtn{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: transparent;
+}
+#muteBtn{
+  position: fixed;
+  bottom: 120px;
+  right: 53px;
+  height: 60px;
+  width: 60px;
+}
