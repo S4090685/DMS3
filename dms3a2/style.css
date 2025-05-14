@@ -10,6 +10,18 @@
   margin: 0;
   padding: 0;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 200%;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  background: var(--bg-color);
+  position: absolute;
+  right: 10%;
+}
 
 header{
   background-color: var(--asset-color);
@@ -87,17 +99,14 @@ nav {
   cursor: pointer;
   font-size: 16px;
   display: flex;
-}
-#switchBtn{
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
   background-color: transparent;
 }
+
 #muteBtn{
   position: fixed;
   bottom: 120px;
   right: 53px;
   height: 60px;
   width: 60px;
+  background-color: transparent;
 }

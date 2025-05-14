@@ -8,7 +8,9 @@
     <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bytesized&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
-        </style>
+    </style>
+    <script src="http://unpkg.com/tone"></script>
+    <script src="https://unpkg.com/konva@9/konva.min.js"></script>
 </head>
 <body>
     <header> Pop the Notes</header>
@@ -34,19 +36,12 @@
             <img src="icons8-music-note-48.png" 
             alt="mute button">
         </button>
-        <div >
-            <button id="switchBtn">
-                <img src="icons8-repeat-64.png" 
-                alt="switch button">
-            </button>
-        </div>
     </div>
-   
+
+    <canvas id="ballCanvas"></canvas>
 
    
-    
 
-</script>
     
 </body>
 </html>
