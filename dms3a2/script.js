@@ -4,7 +4,7 @@
     const dropdown = document.getElementById('dropdownMenu');
   
     menuIcon.addEventListener('click', () => {
-      menuIcon.classList.toggle('change');
+      sIcon.classList.toggle('change');
       dropdown.classList.toggle('show');
     });
   });
@@ -12,8 +12,7 @@
 btn.addEventListener("click", () => {
   audio.muted = !audio.muted;
 });
-
-
+// images
 const canvas = document.getElementById('ballCanvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -24,11 +23,15 @@ const canvas = document.getElementById('ballCanvas');
     const ballImage = new Image();
     ballImage.src = 'Bubble.png';
     
+
+
     let imageLoaded = false;
     ballImage.onload = () => {
       imageLoaded = true;
     };
 
+
+// animation
     class Ball {
       constructor(x, y, radius, color, vx, vy) {
         this.x = x;
@@ -44,7 +47,7 @@ const canvas = document.getElementById('ballCanvas');
         if (imageLoaded) {
           ctx.drawImage(ballImage, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2);
         } else {
-          // fallback to circle if image not yet loaded
+        
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
           ctx.fillStyle = this.color;
@@ -57,7 +60,6 @@ const canvas = document.getElementById('ballCanvas');
         this.x += this.vx;
         this.y += this.vy;
 
-        // Bounce on edges
         if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
           this.vx *= -1;
         }
@@ -111,7 +113,7 @@ const canvas = document.getElementById('ballCanvas');
     setInterval(spawnBall, 1000);
     animate();
 
-    // Resize canvas on window resize
+ 
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
