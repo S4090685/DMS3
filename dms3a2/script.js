@@ -1,12 +1,32 @@
+const headerHeight = 160;
+const canvas = document.getElementById('ballCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 // Create a synth (simple sound)
-const synth = new Tone.Synth().toDestination();
+// const synth = new Tone.MembraneSynth().toDestination();
+const synth = new Tone.PolySynth().toDestination();
+
+
 
 // Optional: unlock audio context on first interaction
 document.body.addEventListener('click', async () => {
   await Tone.start();
 }, { once: true });
 
-const NOTES = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5", "D5"];
+
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+const NOTES = [
+  "C6", "B5", "A5", "G5", "F5", "E5", "D5",
+  "C5", "B4", "A4", "G4", "F4", "E4", "D4",
+  "C4", "B3", "A3", "G3", "F3", "E3", "D3", "C3"
+];
 
  
   window.addEventListener('DOMContentLoaded', () => {
@@ -24,10 +44,6 @@ btn.addEventListener("click", () => {
   audio.muted = !audio.muted;
 });
 
-const canvas = document.getElementById('ballCanvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 const MAX_BALLS = 40;
 const balls = [];
@@ -71,10 +87,21 @@ class Ball {
     this.isPopped = false;
     this.opacity = 1;
     this.popTime = null;
-    this.note = NOTES[Math.floor(Math.random() * NOTES.length)]; // assign random note
+    this.id = Math.random();
+
+    
+    // match the notes and the size of the bubble, the smaller bubble -> higher pitch, the bigger bubble -> lower pitch
+    const minRadius = 10;
+    const maxRadius = 100;
+    const clampedRadius = Math.max(minRadius, Math.min(radius, maxRadius));
+    const index = Math.floor(
+      ((clampedRadius - minRadius) / (maxRadius - minRadius)) * (NOTES.length - 1)
+    );
+    this.note = NOTES[index];
   }
 
   draw() {
+    
     if (imagesLoaded >= imagePairs.length * 2) {
       const img = this.isPopped ? this.imagePair.popped : this.imagePair.normal;
       ctx.save();
@@ -107,6 +134,7 @@ class Ball {
       if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
         this.vy *= -1;
       }
+      
     } else if (this.popTime !== null) {
       const elapsed = (Date.now() - this.popTime) / 1000;
       this.opacity = Math.max(1 - elapsed / 3, 0);
@@ -140,15 +168,18 @@ class Ball {
 function spawnBall() {
   if (balls.length >= MAX_BALLS) return;
 
-  const radius = 20 + Math.random() * 80;
+  const radius = 10 + Math.random() * 100;
   const x = Math.random() * (canvas.width - 2 * radius) + radius;
   const y = Math.random() * (canvas.height - 2 * radius) + radius;
-  const vx = (Math.random() - 0.5) * 6;
-  const vy = (Math.random() - 0.5) * 4;
+
+  const vx = (Math.random() - 0.5) * 6 ;
+  const vy = (Math.random() - 0.5) * 6 ;
 
   const imagePair = imagePairs[Math.floor(Math.random() * imagePairs.length)];
   balls.push(new Ball(x, y, radius, vx, vy, imagePair));
 }
+
+
 
 
 // Animation loop
@@ -177,12 +208,7 @@ canvas.addEventListener('click', (e) => {
   }
 });
 
-// Resize handler
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
 // Start spawning and animation
 setInterval(spawnBall, 1000);
 animate();
+

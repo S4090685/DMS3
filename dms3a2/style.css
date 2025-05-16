@@ -2,26 +2,23 @@
   --bg-color: #fbeaff;
   --asset-color:#dfc3eb;
   --dropdown-color:#f0e0f6;
-
-  /* --main-text-color: #362a3a;
-  --text-color: #305365; */
 }
 
 
 body, html {
   margin: 0;
   padding: 0;
-  height: 200%;
   overflow: hidden;
   background-color: #fbeaff;
-
 }
+
 canvas {
   display: block;
-  background: var(--bg-color);
   position: absolute;
-  right: 10%;
+  top: 160px;
+
 }
+
 p{
   font-family: "Winky Rough", sans-serif;
   color: var(--text-color);
@@ -31,13 +28,12 @@ p{
 
 
 header{
-  line-height: 3;
+  line-height: 2;
   display: flex;
   flex-direction: row;
   background-color: var(--asset-color);
   justify-content: center;
 }
-
 
  nav {
     display:inline-flex;
@@ -46,14 +42,13 @@ header{
     background-color: transparent; /* give the menu a dimension so its clicable*/
     width:60px;
     height: 100px;
-   
-
+  
   }
 
   .container {
     position: fixed;
     left: 100px;
-    top: 60px;
+    top: 46px;
   }
   
   .bar1, .bar2, .bar3 {
@@ -97,20 +92,17 @@ header{
     position: relative;
 }
 .show {display:block;}
+
+
 .custom-controls button {
   border: none;
   padding: 5px 5px;
   cursor: pointer;
-  font-size: 16px;
-  display: flex;
   background-color: transparent;
 }
 
 #muteBtn{
+  right: 60px;
+  top: 39px;
   position: fixed;
-  bottom: 120px;
-  right: 53px;
-  height: 60px;
-  width: 60px;
-
 }
