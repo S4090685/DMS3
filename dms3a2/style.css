@@ -2,6 +2,8 @@
   --bg-color: #fbeaff;
   --asset-color:#dfc3eb;
   --dropdown-color:#f0e0f6;
+  --text-color:#23022f;
+
 }
 
 
@@ -16,7 +18,7 @@ canvas {
   display: block;
   position: absolute;
   top: 160px;
-
+  z-index: 0;
 }
 
 p{
@@ -79,6 +81,8 @@ header{
   flex-direction: column;
   background-color: var(--dropdown-color);
   padding: 10px;
+  z-index: 10;
+
 }
 
 .dropdown a {
@@ -90,6 +94,7 @@ header{
 
 .menu {
     position: relative;
+    z-index: 10;
 }
 .show {display:block;}
 
@@ -101,8 +106,15 @@ header{
   background-color: transparent;
 }
 
-#muteBtn{
+#musicBtn{
   right: 60px;
   top: 39px;
   position: fixed;
+}
+
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 160px;
 }

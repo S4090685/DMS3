@@ -29,17 +29,27 @@
             
         </div>
     </nav>
-    
-    <div class="custom-controls button">
-        <button id="muteBtn" onclick=toggleMute()>
-            <img src="icons8-music-note-48.png" 
-            alt="mute button">
-        </button>
-    </div>
-   
 
+      
     <canvas id="ballCanvas"></canvas>
 
+        <div class="custom-controls button">
+        <button id="musicBtn" onclick="onclickmusic()">
+            <img id="musicIcon" src="mute.png" 
+              alt="play music"
+              width="40"
+              height="40"
+            />
+        </button>
+
+      <div class="audio-player">
+        <audio id="background-music">
+          <source 
+            src="layers-piano-loop.mp3" loop
+            type="audio/mp3"
+          />
+        </audio>
+    </div>
 
 </body>
 </html>
