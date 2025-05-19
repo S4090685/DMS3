@@ -118,3 +118,21 @@ canvas {
   position: absolute;
   top: 160px;
 }
+#popUpInformation {
+  background-color: var(--asset-color);
+  padding: 20px;
+  /* width: 600px; */
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* center on screen */
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.info{
+  font-size: 1.5rem;
+  color: var(--text-color);
+}

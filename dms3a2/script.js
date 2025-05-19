@@ -197,3 +197,17 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
  
+    document.addEventListener('DOMContentLoaded', () => {
+      const clickText = document.getElementById('clickText');
+      const popUpInfo = document.getElementById('popUpInformation');
+      const closePopUp = document.getElementById('closePopUp');
+    
+      clickText.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent anchor from jumping
+        popUpInfo.style.display = (popUpInfo.style.display === 'none' || popUpInfo.style.display === '') ? 'block' : 'none';
+      });
+    
+      closePopUp.addEventListener('click', () => {
+        popUpInfo.style.display = 'none';
+      });
+    });
