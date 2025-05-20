@@ -1,0 +1,138 @@
+:root {
+  --bg-color: #fbeaff;
+  --asset-color:#dfc3eb;
+  --dropdown-color:#f0e0f6;
+  --text-color:#23022f;
+
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fbeaff;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 160px;
+  z-index: 0;
+}
+
+p{
+  font-family: "Winky Rough", sans-serif;
+  color: var(--text-color);
+  font-weight: 50%;
+  font-size: 2rem;
+}
+
+
+header{
+  line-height: 2;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--asset-color);
+  justify-content: center;
+}
+
+ nav {
+    display:inline-flex;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent; /* give the menu a dimension so its clicable*/
+    width:60px;
+    height: 100px;
+  
+  }
+
+  .container {
+    position: fixed;
+    left: 100px;
+    top: 46px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #362A3A;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {
+    opacity: 0; /* the secone bar is removed after change, hence the opacity = 0*/
+}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  font-family: "Winky Rough", sans-serif;
+  display: none;
+  font-size: 1.3rem;
+  flex-direction: column;
+  background-color: var(--dropdown-color);
+  padding: 10px;
+  z-index: 10;
+
+}
+
+.dropdown a {
+    padding:8px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+
+.menu {
+    position: relative;
+    z-index: 10;
+}
+.show {display:block;}
+
+
+.custom-controls button {
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#musicBtn{
+  right: 60px;
+  top: 39px;
+  position: fixed;
+}
+
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 160px;
+}
+#popUpInformation {
+  background-color: var(--asset-color);
+  padding: 20px;
+  /* width: 600px; */
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* center on screen */
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.info{
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
