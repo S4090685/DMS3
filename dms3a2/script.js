@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    // Optional unlock Tone.js on first interaction
+    
     document.body.addEventListener('click', async () => {
       await Tone.start();
     }, { once: true });
@@ -206,7 +206,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const closePopUp = document.getElementById('closePopUp');
     
       clickText.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent anchor from jumping
+        event.preventDefault();
         popUpInfo.style.display = (popUpInfo.style.display === 'none' || popUpInfo.style.display === '') ? 'block' : 'none';
       });
     

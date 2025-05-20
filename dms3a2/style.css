@@ -41,7 +41,7 @@ header{
     display:inline-flex;
     cursor: pointer;
     padding: 10px;
-    background-color: transparent; /* give the menu a dimension so its clicable*/
+    background-color: transparent; 
     width:60px;
     height: 100px;
   
@@ -66,14 +66,14 @@ header{
   }
   
   .change .bar2 {
-    opacity: 0; /* the secone bar is removed after change, hence the opacity = 0*/
+    opacity: 0; 
 }
   
   .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
   
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   font-family: "Winky Rough", sans-serif;
   display: none;
@@ -121,13 +121,12 @@ canvas {
 #popUpInformation {
   background-color: var(--asset-color);
   padding: 20px;
-  /* width: 600px; */
   text-align: center;
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* center on screen */
+  transform: translate(-50%, -50%); 
   z-index: 999;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
