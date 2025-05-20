@@ -3,12 +3,15 @@ const musicIcon = document.getElementById("musicIcon");
 const backgroundMusic = document.getElementById("background-music");
 
 
+
 backgroundMusic.volume = 0.2;
 
 musicBtn.addEventListener("click", function () {
   
   if (backgroundMusic.paused || backgroundMusic.ended) {
     backgroundMusic.currentTime = 0;
+    audio.loop = true;
+    audio.play();
     backgroundMusic.play();
     musicIcon.src = "https://img.icons8.com/?size=100&id=cpC9tCaQDyxh&format=png&color=000000";
   } else {
@@ -34,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
       await Tone.start();
     }, { once: true });
 
-    const synth = new Tone.PolySynth().toDestination();
+    const synth = new Tone.MonoSynth().toDestination();
     const NOTES = ["C6", "B5", "A5", "G5", "F5", "E5", "D5", "C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4", "B3", "A3", "G3", "F3", "E3", "D3", "C3"];
 
     window.addEventListener('resize', () => {
