@@ -8,8 +8,7 @@ musicBtn.addEventListener("click", function () {
   
   if (backgroundMusic.paused || backgroundMusic.ended) {
     backgroundMusic.currentTime = 0;
-    audio.loop = true;
-    audio.play();
+    backgroundMusic.loop = true;
     backgroundMusic.play();
     musicIcon.src = "https://img.icons8.com/?size=100&id=cpC9tCaQDyxh&format=png&color=000000";
   } else {
