@@ -2,8 +2,6 @@ const musicBtn = document.getElementById("musicBtn");
 const musicIcon = document.getElementById("musicIcon");
 const backgroundMusic = document.getElementById("background-music");
 
-
-
 backgroundMusic.volume = 0.2;
 
 musicBtn.addEventListener("click", function () {
@@ -26,11 +24,10 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-    const canvas = document.getElementById('ballCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+const canvas = document.getElementById('ballCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
     
     document.body.addEventListener('click', async () => {
       await Tone.start();
