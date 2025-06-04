@@ -31,7 +31,26 @@ header{
     font-weight: bold;
     color: #866c90;
 }
-
+.colourplt{
+  width: 100px;
+  height: 150px;
+}
+.bubbleimg{
+  width: 120px;
+  height: 120px;
+}
+.pagesc{
+  width: 500px;
+  height: 300px;
+}
+.s1{
+  width: 600px;
+  height: 50px;
+}
+.s2{
+  width: 600px;
+  height: 110px;
+}
 .para {
     color: var(--text-color);
     max-width: 600px;
